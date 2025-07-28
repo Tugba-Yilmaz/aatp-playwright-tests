@@ -5,13 +5,21 @@
   "main": "index.js",
   "scripts": {
     "pw:e2e": "playwright test",
-    "pw:e2e:debug": "npm run pw:e2e -- --debug --workers=1"
+    "pw:e2e:debug": "npm run pw:e2e -- --debug --workers=1",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write ."
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "^1.54.1",
-    "@types/node": "^24.0.13"
+    "@types/node": "^24.0.13",
+    "@typescript-eslint/eslint-plugin": "^8.38.0",
+    "@typescript-eslint/parser": "^8.38.0",
+    "eslint": "^9.31.0",
+    "eslint-plugin-jest": "^29.0.1",
+    "eslint-plugin-playwright": "^2.2.0"
   }
 }

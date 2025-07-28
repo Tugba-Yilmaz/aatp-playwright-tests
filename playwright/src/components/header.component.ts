@@ -1,11 +1,11 @@
 import { Locator, Page } from '@playwright/test';
 
 export class HeaderComponent {
-  component: Locator
-  logOutButton: Locator
-  cartButton: Locator
-  cartCounter: Locator
-  headerTitle: Locator
+  component: Locator;
+  logOutButton: Locator;
+  cartButton: Locator;
+  cartCounter: Locator;
+  headerTitle: Locator;
 
   constructor(readonly page: Page) {
     this.component = this.page.locator('[data-test-id="header-nav"]');

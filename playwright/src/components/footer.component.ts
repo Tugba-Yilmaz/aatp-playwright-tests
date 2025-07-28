@@ -14,10 +14,7 @@ export class FooterComponet {
   }
 
   async clickAbout() {
-    const [newTab] = await Promise.all([
-      this.page.waitForEvent('popup'),
-      this.aboutButton.click()
-    ]);
+    const [newTab] = await Promise.all([this.page.waitForEvent('popup'), this.aboutButton.click()]);
     return newTab;
   }
 }

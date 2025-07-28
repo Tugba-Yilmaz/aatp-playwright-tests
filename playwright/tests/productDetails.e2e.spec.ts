@@ -3,7 +3,6 @@ import { LoginPage } from '../src/pages/Login.page';
 import { ProductDetailsPage } from '../src/pages/ProductDetails.page';
 
 test.describe('Product Browsing and Details Viewing', () => {
-
   let loginPage: LoginPage;
   let productDetailsPage: ProductDetailsPage;
 
@@ -20,8 +19,7 @@ test.describe('Product Browsing and Details Viewing', () => {
   });
 
   test('should display product details when clicking on first product', async ({ page }) => {
-
-    await test.step('WHEN: I click on the first product', async () => {
+    await test.step('WHEN: The user clicks on the first product', async () => {
       await page.locator('[data-test-id="view-details-button"]').first().click();
     });
 
@@ -30,9 +28,4 @@ test.describe('Product Browsing and Details Viewing', () => {
       expect(isVisible).toBeTruthy();
     });
   });
-
-  
-
-
-
 });
